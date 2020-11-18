@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>admin flight details</title>
+</head>
+<body>
+<style>
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }  
+    input, text, select, button {
+  width : 150px;
+  padding:7px 25px;
+  margin: 0;
+  text-align: left;
+  box-sizing: border-box;
+   display: inline-block;
+}  
+    /* Some more styles to beutify this example */
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+    }
+    div.b {
+  text-align: left;
+}
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
+</style>
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                
+            </nav>
+        </div>
+    </div>
+<h1>flight details</h1>
+<p>
+    <form action="adminflightdetails.jsp" method="post">
+    <div class = "b">
+		Enter source name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name = "source" required><br>
+		<br>
+       Enter destination name <input type="text" name = "destination" required><br>
+       <br>
+       Enter airways name&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name = "airways" required><br>
+       <br>
+       Enter ticket charge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name = "ticketcharge" required><br>
+       <br>
+       Click to add&nbsp;&nbsp;&nbsp;&nbsp; <input type ="submit" name = "submit">
+       </div>
+       </form>
+       <div class="fixed-footer">
+        <div class="container">Copyright &copy; 2020 Fly Away</div>        
+    </div>
+</body>
+</html>

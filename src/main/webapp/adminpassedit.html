@@ -1,0 +1,93 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>adminpassedit</title>
+</head>
+<body>
+<div data-include="header"></div>
+<form action="adminpassedit.jsp"method="post">
+enter user name<input type  = "text" name = "username"  required><br>
+enter password<input type  = "password" name = "password"  required><br>
+confirm password<input type  = "password" name = "cpassword"   required><br>
+<input type  = "submit" name = "submit" value = "submit"><br>
+</form> 
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>header</title>
+<style>
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }  
+    div.a {
+  text-align: left;
+}
+    
+    input, text, select, button {
+  width : 150px;
+  padding:7px 25px;
+  margin: 0;
+  box-sizing: border-box;
+}  
+    /* Some more styles to beutify this example */
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+    }
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
+</style>
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+    	<form action="adminpassedit.jsp"method="post">
+    	<div class ="a">
+Enter user name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type  = "text" name = "username"  required><br>
+<br>
+Enter password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type  = "password" name = "password"  required><br>
+<br>
+Confirm password&nbsp;&nbsp;<input type  = "password" name = "cpassword"   required><br>
+<br>
+<input type  = "submit" name = "submit" value = "submit"><br>
+</div>
+</form> 
+    </div>    
+    <div class="fixed-footer">
+        <div class="container">Copyright &copy; 2020 Fly Away</div>        
+    </div>
+</body>
+</html>

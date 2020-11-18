@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>book flight</title>
+</head>
+<body>
+<form action="validate.jsp"method = "post">
+<h1>user registration</h1><br>
+First Name<input type = "text" name = "fname" required><br>
+Last Name <input type = "text" name = "lname" required><br>
+Enter your phone number<input type="tel" id="phone" pattern= "[789][0-9]{9}" name="phone" required><br>
+Email Id <input type = "email" name = "emailid" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+Date<input type = "date" name = "date" required><br>
+No of persons<input type = "text" name = "noofpersons" pattern = "[1-9]{1}"required><br>
+Address <input type = "text" name = "address" size = "50" required><br>
+<input type ="submit" value = "click on this button to pay">
+</form>
+</body>
+</html>
