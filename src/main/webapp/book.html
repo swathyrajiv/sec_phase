@@ -4,17 +4,83 @@
 <meta charset="UTF-8">
 <title>book flight</title>
 </head>
+<style>
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    div.b {
+  text-align: left;
+}
+
+    
+    .fixed-footer{
+        bottom: 0;
+    }    
+    /* Some more styles to beutify this example */
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+    }
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
+    
+
+
+</style>
+</head>
 <body>
+    <div class="fixed-header">
+        <div class="container">
+        <h1>Fly away......believe in the best...</h1>
+          </div>
+</div>  
+<br>
+<br>
+<br>
 <form action="validate.jsp"method = "post">
-<h1>user registration</h1><br>
+<br>
+<br>
+<h1>User Registration</h1><br>
+<div class = "b">
 First Name<input type = "text" name = "fname" required><br>
+<br>
 Last Name <input type = "text" name = "lname" required><br>
-Enter your phone number<input type="tel" id="phone" pattern= "[789][0-9]{9}" name="phone" required><br>
+<br>
+phone no<input type="tel" id="phone" pattern= "[789][0-9]{9}" name="phone" required><br>
+<br>
 Email Id <input type = "email" name = "emailid" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
-Date<input type = "date" name = "date" required><br>
-No of persons<input type = "text" name = "noofpersons" pattern = "[1-9]{1}"required><br>
+<br>
+Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "date" name = "date" required><br>
+<br>
+persons&nbsp;&nbsp;&nbsp;<input type = "text" name = "noofpersons" pattern = "[1-9]{1}"required><br>
+<br>
 Address <input type = "text" name = "address" size = "50" required><br>
+<br>
+
+   
 <input type ="submit" value = "click on this button to pay">
+</div>
 </form>
+
 </body>
 </html>

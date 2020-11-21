@@ -1,13 +1,69 @@
+
+<!-- <h2>fly high  we will take care of you....</h2>
+<a href = "userhome.html">click to search for flights</a> -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>homepage</title>
+<meta charset="utf-8">
+<title>index</title>
+<style>
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }    
+    /* Some more styles to beutify this example */
+    
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+    }
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
+</style>
 </head>
 <body>
-<h1>flyaway</h1>
 
-<h2>fly high  we will take care of you....</h2>
-<a href = "userhome.html">click to search for flights</a>
+    <div class="fixed-header">
+        <div class="container">
+        <h1>Fly away......believe in the best... we will take care of you..</h1>
+            <nav>
+            	 
+                <a href = "userhome.html">Search for flights</a>
+                <a href = "Contactsus.html">Contact us</a>
+                <a href = "AboutUs.html">About Us</a>
+                
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+    	
+    </div> 
+    <img src = "file:///Users/bijithmp/Desktop/java2e/web-starter/images/aeroplane.jpg.image_.784.410.jpg" width="1000" height="750" alt="Flowers in Chania">    
+    <div class="fixed-footer">
+        <div class="container">Copyright &copy; 2020 Fly Away</div>        
+    </div>
 </body>
 </html>

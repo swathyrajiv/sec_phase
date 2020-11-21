@@ -10,7 +10,7 @@
 </head>
 <body>
 <form action="savedata.jsp" method = "post">
-
+<%@include file = "header.html" %>
 <%
 
  
@@ -29,12 +29,12 @@ ArrayList<Integer> fetchticket_charge = new ArrayList<Integer>();
  fetchflightid = ref.fetchflightid(source,destination); 
 if(fetchsource.isEmpty()){
 %>
-<%out.println("sorry not found....plase check another place"); %>
+<%out.println("sorry not found....please check another place"); %>
 <%}else { %>
 
 <div align="center">
 <table>
-<caption>SEARCH RESULTS</caption>
+<caption><b>SEARCH RESULTS</b></caption>
     <tr>
     	<th scope = "col">flightid </th>
         <th scope="col">FROM</th>
@@ -55,8 +55,6 @@ for(int i =0,t=0;i<fetchsource.size();i++,t++){
 	  <td><input type = "text" name = "selectedticketcharge"  value =" <%out.println(fetchticket_charge.get(i)); %>"></td>
 	 
 	    </tr> 
-	   
-	   
 	   
 <%} %> 
 

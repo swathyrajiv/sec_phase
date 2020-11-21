@@ -4,14 +4,74 @@
 <meta charset="UTF-8">
 <title>Payment</title>
 </head>
+<style>
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }    
+    /* Some more styles to beutify this example */
+    
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+    }
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
+</style>
 <body>
+    <div class="fixed-header">
+        <div class="container">
+</div>
+</div>
+<div class="fixed-header">
+        <div class="container">
+</div>
+</div>
 <form action="paymentprocess.jsp" method ="post" >
-name as in your card<input type = "text" name = "name" required>
-Bank name<input type = "text" name = "Bankname" required>
-Account number<input type = "text" name = "accnum" required>
-card number<input type = "text" name = "cardnum" required>
-cvv <input type = "text" name = "cvv" required>
-<input type = "submit" value ="pay">
+Name as in your card&nbsp;<input type = "text" name = "name" required><br>
+<br>
+Bank name&nbsp;<input type = "text" name = "Bankname" required><br>
+<br>
+Account no&nbsp;<input type = "text" name = "accnum" required><br>
+<br>
+card number<input type = "text" name = "cardnum" required><br>
+<br>
+cvv &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "cvv" required>
+<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "submit" value ="pay">
 </form>
+
+
+    
+    <div class="container">
+    	
+    </div>    
+    <div class="fixed-footer">
+        <div class="container">Copyright &copy; 2020 Fly Away</div>        
+    </div>
 </body>
-</html>
+</html> 

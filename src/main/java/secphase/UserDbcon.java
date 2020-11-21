@@ -32,13 +32,7 @@ public class UserDbcon {
 			}
 	 public int insertUserDetails(String fname,String Lname,String phone,String email, String date, int noofpersons,String address) {
 		 connectDb();
-//	 try{
-//			 DateFormat dateFormat = new SimpleDateFormat("yyyy/mm/dd");
-//			  Date date1= dateFormat.parse(date);
-//			 } catch (ParseException e) {
-//			System.out.println("unable to pass"+e);
-//
-//			 }
+
 		  
 		   String insertquery = "insert into userdetails(fname, Lname,phone,email,date,noofpersons,address) values('"+fname+"','"+Lname+"','"+phone+"','"+email+"','"+date+"','"+noofpersons+"','"+address+"')";
 		   try {
@@ -68,10 +62,42 @@ public class UserDbcon {
 					
 				}
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				
 				System.out.println("cannot fetch"+e);
 			}return al;
 				 
 	 }
-
+	 public int updateContactus(String fname,String lname,String feedback) {
+		 connectDb();
+		 String insertQuery = "insert into contactus(fname,lname,feedback) values ('"+fname+"','"+lname+"','"+feedback+"')";
+		 try {
+			   if(theStat.executeUpdate(insertQuery)>0) 
+				   return 1;
+			   else return 0; }
+			  catch (SQLException |NullPointerException ex) { 
+			 System.out.println("unable to add"+ex); }
+		   return 1;
+	 }
+	
+public ArrayList<String> fetchUserFeedback()
+{
+	connectDb();
+	String fetchQuery = "select * from contactus";
+	ArrayList<String> al = new ArrayList<String>();
+	 ResultSet rst = null;
+		try {
+			 
+			rst = theStat.executeQuery(fetchQuery);
+			while(rst.next()) {
+				al.add(rst.getString("fname"));
+			al.add(rst.getString("lname"));
+				al.add(rst.getString("feedback"));
+				
+				
+			}
+		} catch (SQLException e) {
+			
+			System.out.println("cannot fetch"+e);
+		}return al;
+}
 }

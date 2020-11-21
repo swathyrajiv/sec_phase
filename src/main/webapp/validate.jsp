@@ -13,12 +13,7 @@
 
 String fname = request.getParameter("fname");
 %>
-<%-- <%out.println(fname);%><br>
-<% 
-if(fname==null){
-%>
-<%= "please enter a name" %><br>
-<%} %>	 --%>
+
 <% String lname = request.getParameter("lname");
  %>
 <% 
