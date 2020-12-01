@@ -1,4 +1,3 @@
-
 <%@page import="secphase.Dbcon" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -24,7 +23,7 @@
     int t = ref.insertData(user,newp);
        if(t==1){
     		%>
-    		<%out.println("details  added successfully"); %>
+    		<%out.println("your username and password updated  successfully"); %>
          <a href ="adminwel.jsp">click on this link to go back to welcome page</a> 
     		
     	<%}else  {%>

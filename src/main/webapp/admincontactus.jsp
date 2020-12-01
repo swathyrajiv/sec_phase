@@ -15,7 +15,7 @@ ArrayList<String> al = new ArrayList<String>();
 al = ref.fetchUserFeedback();
 for(int i = 0; i<al.size();i++){
 	%>
-	<%out.println(al.get(i)); %>
+	<%out.println(al.get(i));%><br>
 <%} %>
 
 </body>

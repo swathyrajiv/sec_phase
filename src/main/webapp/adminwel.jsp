@@ -19,15 +19,10 @@
 	</div>
 	<nav>
 	<a href="adminpassedit.html" > <b>Change password</b></a>&nbsp;&nbsp;&nbsp;
-	
 	<a href = "adminflightdetails.html"><b>Add flight details</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href = "admincontactus.jsp"><b>View Feedbacks</b></a>
+	<a href = "viewflightdetails.jsp"><b>View all flights</b></a>
 	<a href = "logout.jsp"><b>Logout</b></a>&nbsp;
-	
 	</nav>
-	
-	
-	
-
 </body>
 </html>

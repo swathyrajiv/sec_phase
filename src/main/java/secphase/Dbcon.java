@@ -23,6 +23,7 @@ public class Dbcon {
 		
 	} public void connectDb() {
 	try {
+		//please add the port number user name and password
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		dbCon = DriverManager.getConnection("jdbc:mysql://localhost:3307/simplilearnoct","root","");
 		theStat =  dbCon.createStatement();
@@ -76,92 +77,7 @@ public class Dbcon {
 			  }
 			 
 	
-				/*
-				 * public int insertSource(String source){ connectDb();
-				 * 
-				 * String insertData = "insert into source(sourcename) values('"+source+"')";
-				 * try { if(theStat.executeUpdate(insertData)>0) return 1; else return 0; }
-				 * catch (SQLException |NullPointerException ex) { // TODO Auto-generated catch
-				 * block System.out.println("unable to add"+ex); }
-				 * 
-				 * return 1 ; } public int insertDestination(String destination) { connectDb();
-				 * 
-				 * String insertData =
-				 * "insert into destination(destination_name) values('"+destination+"')"; try {
-				 * if(theStat.executeUpdate(insertData)>0) return 1; else return 0; } catch
-				 * (SQLException |NullPointerException ex) { // TODO Auto-generated catch block
-				 * System.out.println("unable to add"+ex); }
-				 * 
-				 * return 1 ; } public int insertairways(String airways) { connectDb();
-				 * 
-				 * String insertData =
-				 * "insert into airways(airways_name) values('"+airways+"')"; try {
-				 * if(theStat.executeUpdate(insertData)>0) return 1; else return 0; } catch
-				 * (SQLException |NullPointerException ex) { // TODO Auto-generated catch block
-				 * System.out.println("unable to add"+ex); }
-				 * 
-				 * return 1 ; } public ArrayList<String> addsourcedrop() {
-				 * 
-				 * connectDb();
-				 * 
-				 * String fetchqry = "select sourcename from source"; ResultSet rst = null;
-				 * 
-				 * ArrayList<String>source = new ArrayList<String>();
-				 * 
-				 * try { rst = theStat.executeQuery(fetchqry);
-				 * 
-				 * while(rst.next()) {
-				 * 
-				 * source.add(rst.getString("sourcename"));
-				 * 
-				 * 
-				 * }
-				 * 
-				 * 
-				 * 
-				 * } catch (SQLException e) { // TODO Auto-generated catch block
-				 * e.printStackTrace(); } return source; } public ArrayList<String>
-				 * adddestinationdrop() {
-				 * 
-				 * connectDb();
-				 * 
-				 * String fetchqry = "select destination_name from destination"; ResultSet rst =
-				 * null; ArrayList<String>destination = new ArrayList<String>();
-				 * 
-				 * try { rst = theStat.executeQuery(fetchqry);
-				 * 
-				 * while(rst.next()) {
-				 * 
-				 * destination.add(rst.getString("destination_name"));
-				 * 
-				 * 
-				 * 
-				 * 
-				 * }
-				 * 
-				 * } catch (SQLException e) { // TODO Auto-generated catch block
-				 * e.printStackTrace(); } return destination; } public ArrayList<String>
-				 * addairwaysdrop() {
-				 * 
-				 * connectDb();
-				 * 
-				 * String fetchqry = "select airways_name from airways"; ResultSet rst = null;
-				 * ArrayList<String>airways = new ArrayList<String>();
-				 * 
-				 * try { rst = theStat.executeQuery(fetchqry);
-				 * 
-				 * while(rst.next()) {
-				 * 
-				 * airways.add(rst.getString("airways_name"));
-				 * 
-				 * 
-				 * 
-				 * 
-				 * }
-				 * 
-				 * } catch (SQLException e) { // TODO Auto-generated catch block
-				 * e.printStackTrace(); } return airways; }
-				 */
+				
 			   public int addflightdetails(String source, String destination, String airways,int ticketcharge){
 				   connectDb();
 				   String insertquery = "insert into flight_details (source_name,destination_name,airways_name,ticket_charge) values('"+source+"','"+destination+"','"+airways+"','"+ticketcharge+"')";
@@ -276,6 +192,26 @@ public class Dbcon {
 					}return fetch_flightid;
 					
 				}
+				public ArrayList <String>fetchflightdetails(){
+					connectDb();
+					ResultSet rst = null;
+					String fetchQuery = "select * from flight_details";
+					ArrayList<String>fetch_flightdetails = new ArrayList<String>();
+					try {
+						rst = theStat.executeQuery(fetchQuery);
+						while(rst.next()) {
+							
+							
+							fetch_flightdetails.add(rst.getString("source_name"));
+							fetch_flightdetails.add(rst.getString("destination_name"));
+							fetch_flightdetails.add(rst.getString("airways_name"));
+							fetch_flightdetails.add(rst.getString("ticket_charge"));
+							
+						}
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						System.out.println("cannot fetch"+e);
+				}return fetch_flightdetails;
 				
 }
-
+}
